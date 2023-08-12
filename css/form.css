@@ -1,0 +1,56 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap");
+
+.form-container {
+  margin-top: 20px;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.input {
+  width: 400px;
+  padding: 20px;
+  border-radius: 15px;
+  box-shadow: 4px 4px 12px -1px rgba(0,0,0,0.59);
+  -webkit-box-shadow: 4px 4px 12px -1px rgba(0,0,0,0.59);
+  -moz-box-shadow: 4px 4px 12px -1px rgba(0,0,0,0.59);
+}
+
+label {
+  font-weight: 400;
+}
+
+input, textarea {
+  background-color: #dfdede;
+  width: 100%;
+  padding: 10px 0px;
+  margin-top: 5px;
+  border-radius: 5px;
+  border: 1px solid #dbdbdb;
+  resize: none;
+}
+
+.input-email, .input-password, .re-password, .massage {
+  margin-top: 20px;
+}
+
+.btn button {
+  background-color: orangered;
+  color: white;
+  padding: 6px 25px;
+  border: none;
+  border-radius: 50px;
+  margin-top: 5px;
+  font-size: 16px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: 0.3s ease-in-out;
+  margin-top: 10px;
+  height: 40px;
+  width: 100px;
+}
+
+button:hover {
+  background-color: rgb(255, 119, 70);
+}

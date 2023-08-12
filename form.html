@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Form Input</title>
+    <link rel="stylesheet" href="css/form.css">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+<body>
+
+    <!-- NAVBAR  -->
+
+    <div class="navbar">
+        <div class="nav-left">
+            <ul class="active">
+                <li>About</li>
+                <li>Blog</li>
+            </ul>
+        </div>
+        <div class="nav-right">
+            <button>Contact</a></button>
+        </div>
+    </div>   
+    
+    <!-- NAVBAR END -->
+
+    <!-- FORM -->
+    <div class="form-container">
+        <form class="input">
+            <div class="input-name">  
+                <label for="name">Name</label>
+                <input id="name" type="text" placeholder="Full Name">
+            </div>
+            <div class="input-email">
+                <label for="email">Email</label>
+                <input id="email" type="email" placeholder="your@mail.com">
+            </div>
+            <div class="input-password">
+                <label for="password">Password</label>
+                <input id="password" type="text" placeholder="Password">
+            </div>
+            <div class="re-password">
+                <label for="password">Confirm Password</label>
+                <input id="repassword" type="text" placeholder="Confirm Password">
+            </div>
+            <div class="massage">
+                <label for="massage">Your Massage</label>
+                <textarea name="pesan" id="massage" cols="30" rows="10" placeholder="your massage"></textarea>
+            </div>
+            <div class="btn">
+                <button type="button" onclick="submitData()">Submit</button>
+            </div>
+        </form>    
+    </div>
+
+    <!-- FORM END -->
+    
+    <!-- SCRIPT -->
+
+    <script src="js/contact.js"></script>
+
+</body>
+</html>

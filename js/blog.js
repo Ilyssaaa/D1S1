@@ -80,29 +80,3 @@ function renderProject() {
       </div>`;
   }
 }
-
-
-//    <div class="project-card">
-//        <img class="project-image" src="${dataProject[i].image}" //alt="Project ${
-//     i + 1
-//    } Image" width="100%">
-//        <h3 class="project-title"><a href="./projectdetail.html">${
-//          dataProject[i].projectName
-//        }</a></h3>
-//        <small class="project-duration">Durasi: ${dataProject[i].//startDate} - ${
-//      dataProject[i].endDate
-//    }</small>
-//        <p class="project-description">
-//          ${dataProject[i].description}
-//        </p>
-//        <div class="project-technologies">
-//          ${dataProject[i].technologies.javascript? `<i class="fa-brands //fa-square-js"></i>`: ""}
-//          ${dataProject[i].technologies.golang? `<i class="fa-brands //fa-golang"></i>`: ""}
-//          ${dataProject[i].technologies.php? `<i class="fa-brands //fa-php"></i>`: ""}
-//          ${dataProject[i].technologies.java? `<i class="fa-brands //fa-java"></i>`: ""}
-//        </div>
-//        <div class="project-actions">
-//          <button>Edit</button>
-//          <button>Delete</button>
-//        </div>
-//      </div>`;

@@ -1,0 +1,290 @@
+* {
+    margin: 0;
+    padding: 0;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    list-style-type: none;
+    text-decoration: none;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: var(--background-color);
+    margin-top: 80px;
+    margin-bottom: 50px;
+}
+
+:root {
+    --primary-color: #1877F2;
+    --secondary-color: #64a7ff;
+    --white-color: #ffffff;
+    --inactive-color: #dbdbdb;
+    --background-color: #F0F2F5;
+}
+
+/* Navbar */
+
+.navbar {
+    background-color: var(--white-color);
+    width: 100%;
+    padding: 8px 10px;
+    box-shadow: 0px 0px 10px 0px rgba(0,0,0,0.45);
+    -webkit-box-shadow: 0px 0px 10px 0px rgba(0,0,0,0.45);
+    -moz-box-shadow: 0px 0px 10px 0px rgba(0,0,0,0.45);
+    position: fixed;
+    z-index: 999;
+    top: 0;
+    right: 0;
+    left: 0;
+
+}
+
+.navbar .nav-wrapper {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.nav-left .logo .logo-img {
+    width: 50px;
+}
+
+.nav-mid ul {
+    display: flex;
+    gap: 10px;
+}
+
+.nav-mid li a {
+    color: var(--inactive-color);
+    font-size: 20px;
+    align-items: center;
+}
+
+ul li i {
+    padding: 10px;
+}
+
+.nav-right-button button {
+    background-color: var(--primary-color);
+    color: var(--white-color);
+    border-style: none;
+    padding: 8px 30px;
+    border-radius: 8px;
+    font-weight: 600;
+    transition: 0.3s ease-in-out;
+}
+
+/* Navbar end */
+
+/* Post Content */
+
+.header {
+    text-align: center;
+    margin-top: 30px;
+}
+
+.form-container {
+    border-style: none;
+    margin-top: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.form-container .container-wrapper {
+    width: 500px;
+    background-color: var(--white-color);
+    padding: 20px;
+    border: 1px solid var(--inactive-color);
+    border-radius: 10px;
+}
+
+.user-info {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.user-image {
+    width: 40px;
+    height: 40px;
+    background-color: aquamarine;
+    border-radius: 100px;
+}
+
+.option-user-name .user-name {
+    font-size: 14px;
+    font-weight: 500;
+}
+
+.option-user-name select {
+    font-size: 12px;
+    font-weight: 500;
+    background-color:var(--white-color);
+    padding: 2px 6px;
+    border-radius: 5px;
+}
+
+.option-user-name .select {
+    font-size: 12px;
+    font-weight: 500;
+}
+
+.description {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+}
+
+.description textarea {
+    height: 200px;
+    padding: 10px;
+    margin-top: 10px;
+    border-style: none;
+    resize: none;
+}
+
+textarea:focus, input:focus{
+    outline: var(--inactive-color);
+}
+
+.description textarea::placeholder {
+    font-size: 30px;
+    font-weight: 300;
+}
+
+.images-label {
+    border: 1px solid #dbdbdb;
+    border-radius: 8px;
+}
+
+.images-label .img-label {
+    padding: 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.images-label .img-label p {
+    font-size: 18px;
+    font-weight: 400;
+}
+
+.img-label .icon-post {
+    display: flex;
+    gap: 10px;
+    font-size: 24px;
+}
+
+.post-button {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.post-button button {
+    background-color: var(--primary-color);
+    padding: 8px 20px;
+    border-style: none;
+    border-radius: 5px;
+    width: 100%;
+    font-size: 16px;
+    font-weight: 600;
+    color: var(--white-color);
+    margin-top: 20px;
+    transition: 0.3s ease-in-out;
+}
+
+/* Post Content end */
+
+/* Post */
+
+.post-container {
+    border-style: none;
+    margin-top: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.post-container .post-wrapper {
+    width: 500px;
+    background-color: var(--white-color);
+    padding: 20px;
+    border: 1px solid var(--inactive-color);
+    border-radius: 10px;
+}
+
+.user-info {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.time-user-name .user-name {
+    font-size: 14px;
+    font-weight: 500;
+}
+
+.time-user-name .time-post {
+    font-size: 12px;
+    font-weight: 400;
+}
+
+.description-post {
+    margin-top: 10px;
+}
+
+.images-post {
+    display: flex;
+    justify-content: center;
+    object-fit: cover;
+    margin-top: 10px;
+
+}
+
+.images-post .img-post {
+    object-fit: cover;
+    width: 100%;
+    height: 200px;
+}
+
+.edit-post-button {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+}
+
+.edit-post-button button {
+    padding: 8px 20px;
+    border-style: none;
+    border-radius: 5px;
+    width: 100%;
+    font-size: 16px;
+    font-weight: 600;
+    color: var(--white-color);
+    margin-top: 20px;
+}
+
+.edit-post-button .edit {
+    background-color: var(--primary-color);
+    transition: 0.3s ease-in-out;
+}
+
+.edit-post-button .delete {
+    color: rgb(118, 118, 118);
+    background-color: var(--inactive-color);
+    transition: 0.3s ease-in-out;
+}
+
+/* Post  end */
+
+/* Interactive styles */
+
+button:hover {
+    background-color: var(--secondary-color);
+}
+
+.edit:hover {
+    background-color: var(--secondary-color);
+}

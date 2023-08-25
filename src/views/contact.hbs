@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Contact Me</title>
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9"
+      crossorigin="anonymous"
+    />
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-HwwvtgBNo3bZJJLYd8oVXjrBZt8cqVSpeBNS5n7C8IVInixGAoxmnlMuBnhbgrkm"
+      crossorigin="anonymous"
+    ></script>
+  </head>
+  <body>
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg bg-light py-3">
+      <div class="container">
+        <a class="navbar-brand" href="/index">
+          <img width="75" src="/img/Parental_Advisory_label.png" alt="" />
+        </a>
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#navbarSupportedContent"
+          aria-controls="navbarSupportedContent"
+          aria-expanded="false"
+          aria-label="Toggle navigation"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+          <ul class="navbar-nav me-auto mb-2 mb-lg-0 fs-5 d-flex">
+            <li class="nav-item">
+              <a
+                class="nav-link"
+                aria-current="page"
+                href="/index"
+                >Home</a
+              >
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">Testimonial</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="/form-project">Project</a>
+            </li>
+          </ul>
+          <button class="btn btn-primary px-5 fw-medium" type="submit">
+            <a class="nav-link" href="/contact"> Contact </a>
+          </button>
+        </div>
+      </div>
+    </nav>
+    <!-- Navbar end -->
+
+    <!-- FORM -->
+    <div class="container mt-4">
+
+      <div class="input-group mb-3" style="height: 50px;">
+        <span class="input-group-text" id="basic-addon1">Name</span>
+        <input type="text" class="form-control" placeholder="Full Name" aria-label="Username" aria-describedby="basic-addon1">
+      </div>
+      
+      <div class="input-group mb-3" style="height: 50px;">
+        <input type="text" class="form-control" placeholder="Your Email" aria-label="Recipient's username" aria-describedby="basic-addon2">
+        <span class="input-group-text" id="basic-addon2">@example.com</span>
+      </div>
+      
+      <div class="input-group mb-3" style="height: 50px;">
+        <input type="text" class="form-control" placeholder="Username" aria-label="Username">
+      </div>
+      
+      <div class="form-floating">
+        <textarea class="form-control" placeholder="Leave a comment here" id="floatingTextarea" style="resize: none; height: 200px;"></textarea>
+        <label for="floatingTextarea">Comments</label>
+      </div>
+
+      <div class="d-grid d-md-flex justify-content-md-end my-3">
+        <button class="btn btn-primary btn-lg px-5 fw-medium" type="button">Submit</button>
+      </div>
+
+    </div>
+    <!-- FORM END -->
+
+  </body>
+</html>

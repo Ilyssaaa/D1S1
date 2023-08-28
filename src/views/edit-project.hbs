@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Form Project</title>
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9"
+      crossorigin="anonymous"
+    />
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-HwwvtgBNo3bZJJLYd8oVXjrBZt8cqVSpeBNS5n7C8IVInixGAoxmnlMuBnhbgrkm"
+      crossorigin="anonymous"
+    ></script>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"
+      integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+  </head>
+  <body>
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg bg-light py-3">
+      <div class="container">
+        <a class="navbar-brand" href="/index">
+          <img width="75" src="/img/Parental_Advisory_label.png" alt="" />
+        </a>
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#navbarSupportedContent"
+          aria-controls="navbarSupportedContent"
+          aria-expanded="false"
+          aria-label="Toggle navigation"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+          <ul class="navbar-nav me-auto mb-2 mb-lg-0 fs-5 d-flex">
+            <li class="nav-item">
+              <a class="nav-link" aria-current="page" href="/index"
+                >Home</a
+              >
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">My Project</a>
+            </li>
+          </ul>
+          <button class="btn btn-primary px-5 fw-medium" type="submit">
+            <a class="nav-link" href="/contact">
+              Contact
+            </a>
+          </button>
+        </div>
+      </div>
+    </nav>
+    <!-- Navbar end -->
+
+    <!-- FORM -->
+    <h3 class="text-center mt-5">Edit Project</h3>
+    <form class="container" method="post" action="edit-project/{{@index}}">
+
+      <div class="mb-3">
+        <label for="formGroupExampleInput" class="form-label">Project Name</label>
+        <input type="text" class="form-control" id="projectName" name="projectName" placeholder="Title" value="{{detailProject.projectName}}">
+      </div>
+
+      <div class="row">
+        <div class="col">
+          <label for="date">Start Date</label>
+          <input type="date" class="form-control" id="startDate" name="startDate" value="{{detailProject.startDate}}">
+        </div>
+        <div class="col">
+          <label for="date">End Date</label>
+          <input type="date" class="form-control" id="endDate" name="endDate" value="{{detailProject.endDate}}">
+        </div>
+      </div>
+
+      <div class="form-floating mt-3">
+        <textarea class="form-control" id="content" name="content" style="height: 200px; resize: none;">{{detailProject.content}}</textarea>
+        <label for="content">Your Description</label>
+      </div>
+
+      <div class="tech mt-3">
+        <p>Technologi</p>
+      </div>
+
+      <div class="btn-group d-flex mt-3" role="group" aria-label="Basic checkbox toggle button group">
+        {{#if detailProject.nodeJs}}
+        <input type="checkbox" class="btn-check" value="nodeJs" id="nodeJs" name="nodeJs" checked>
+        {{else}}
+        <input type="checkbox" class="btn-check" value="nodeJs" id="nodeJs" name="nodeJs">
+        {{/if}}
+        <label class="btn btn-outline-primary" for="nodeJs">Node.JS</label>
+
+        {{#if detailProject.javascript}}
+        <input type="checkbox" class="btn-check" value="javascript" id="javascript" name="javascript" autocomplete="off">
+        {{else}}
+        <label class="btn btn-outline-primary" for="javascript">Javascript</label>
+        {{/if}}
+
+        {{#if detailProject.react}}
+        <input type="checkbox" class="btn-check" value="react" id="react" name="react" autocomplete="off">
+        {{else}}
+        <label class="btn btn-outline-primary" for="react">Reacj.JS</label>
+        {{/if}}
+      
+        {{#if detailProject.php}}
+        <input type="checkbox" class="btn-check" value="php" id="php" name="php" autocomplete="off">
+        {{else}}
+        <label class="btn btn-outline-primary" for="php">PHP</label>
+        {{/if}}
+      </div>
+
+      <div class="input-group mt-3">
+        <input type="file" class="form-control" id="image" name="image">
+      </div>
+      
+      <div class="d-grid justify-content-md-end mt-3">
+        <button class="btn btn-primary px-5" type="submit">Submit</button>
+      </div>
+
+    </form>
+
+    <!-- FORM END -->
+
+    <!-- SCRIPT -->
+
+    {{!-- <script src="/js/blog.js"></script>
+    <script src="/js/menu.js"></script> --}}
+
+  </body>
+</html>

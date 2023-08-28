@@ -1,0 +1,186 @@
+* {
+    margin: 0;
+    padding: 0;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    list-style-type: none;
+    text-decoration: none;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: var(--background-color);
+    margin-top: 80px;
+    margin-bottom: 50px;
+}
+
+:root {
+    --primary-color: #1877F2;
+    --secondary-color: #64a7ff;
+    --white-color: #ffffff;
+    --inactive-color: #dbdbdb;
+    --background-color: #F0F2F5;
+}
+
+/* Navbar */
+
+.navbar {
+    background-color: var(--white-color);
+    width: 100%;
+    padding: 8px 10px;
+    box-shadow: 0px 0px 10px 0px rgba(0,0,0,0.45);
+    -webkit-box-shadow: 0px 0px 10px 0px rgba(0,0,0,0.45);
+    -moz-box-shadow: 0px 0px 10px 0px rgba(0,0,0,0.45);
+    position: fixed;
+    z-index: 999;
+    top: 0;
+    right: 0;
+    left: 0;
+
+}
+
+.navbar .nav-wrapper {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.nav-left .logo .logo-img {
+    width: 50px;
+}
+
+.nav-mid ul {
+    display: flex;
+    gap: 20px;
+}
+
+.nav-mid li a {
+    display: flex;
+    flex-direction: column;
+    color: var(--inactive-color);
+    font-size: 16px;
+    align-items: center;
+    justify-content: center;
+    padding: 8px;
+    border-radius: 8px;
+    transition: 0.3s ease-in-out;
+}
+
+.nav-mid li a:hover{
+    background-color: var(--primary-color);
+    color: var(--white-color);
+}
+
+.nav-right-button button {
+    background-color: var(--primary-color);
+    color: var(--white-color);
+    border-style: none;
+    padding: 8px 30px;
+    border-radius: 8px;
+    font-weight: 600;
+    transition: 0.3s ease-in-out;
+}
+
+.nav-right-button button a {
+    color: var(--white-color)
+}
+
+/* Navbar end */
+
+/* Menu Dropdown */
+
+.menu-toggle {
+    font-size: 24px;
+    display: none;
+}
+
+.dropdown-hide {
+    display: none;
+    position: absolute;
+    top: 50px;
+    background-color: white;
+    width: 100%;
+}
+
+.menu-dropdown {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 100%;
+}
+
+.menu-dropdown li {
+    padding: 14px;
+    font-weight: 600;
+    border-radius: 8px;
+    transition: 0.3s ease-in-out;
+    margin: 4px;
+}
+
+.menu-dropdown li i {
+    color: var(--inactive-color);
+    margin-right: 10px;
+}
+
+.menu-dropdown li a {
+    color: var(--inactive-color);
+}
+
+.menu-dropdown .nav-right-button {
+    padding: 8px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.nav-right-button button {
+    width: 100%;
+    height: 40px;
+}
+
+.menu-dropdown li:hover {
+    background-color: var(--primary-color);
+    color: var(--white-color);
+}
+
+
+/* Mobile view */
+
+@media only screen and (max-width: 600px) {
+
+    /* Navbar */
+
+    .menu-dropdown {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .nav-mid ul {
+        display: none;
+        position: absolute;
+    }
+
+    .nav-right-button {
+        display: none;
+    }
+
+    .menu-dropdown .nav-right-button {
+        display: block;
+    }
+
+    .menu-toggle {
+        font-size: 24px;
+        display: block;
+    }
+}
+
+
+/* Interactive styles */
+
+button:hover {
+    background-color: var(--secondary-color);
+}
+
+.edit:hover {
+    background-color: var(--secondary-color);
+}

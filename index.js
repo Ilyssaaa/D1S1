@@ -3,6 +3,11 @@ const app = express();
 const PORT = 5000;
 const path = require("path");
 
+// Sequelize init
+const config = require('./src/config/config.json')
+const { Sequelize, QueryTypes } = require('sequelize')
+const sequelize = new Sequelize(config.development)
+
 // setup call hbs with sub folder
 app.set("view engine", "hbs");
 app.set("views", path.join(__dirname, "src/views"));
@@ -14,32 +19,32 @@ app.use(express.static("src/assets"));
 app.use(express.urlencoded({ extended: false }));
 
 // dummy project
-const dataProject = [
-  {
-    id: 1,
-    projectName: "Ini Lorem",
-    author: "Rebbeca Eltra",
-    startDate: "2015",
-    endDate: "2016",
-    content: "Lorem ipsum dolor sit amet, consectetur adipiscing el",
-    nodeJs: true,
-    javascript: true,
-    react: true,
-    php: true,
-  },
-  {
-    id: 2,
-    projectName: "Ini Juga Lorem",
-    author: "Jhon doe",
-    startDate: "2015",
-    endDate: "2016",
-    content: "Lorem Ipsum",
-    nodeJs: true,
-    javascript: true,
-    react: true,
-    php: false,
-  },
-];
+// const dataProject = [
+//   {
+//     id: 1,
+//     projectName: "Ini Lorem",
+//     author: "Rebbeca Eltra",
+//     startDate: "2015",
+//     endDate: "2016",
+//     content: "Lorem ipsum dolor sit amet, consectetur adipiscing el",
+//     nodeJs: true,
+//     javascript: true,
+//     react: true,
+//     php: true,
+//   },
+//   {
+//     id: 2,
+//     projectName: "Ini Juga Lorem",
+//     author: "Jhon doe",
+//     startDate: "2015",
+//     endDate: "2016",
+//     content: "Lorem Ipsum",
+//     nodeJs: true,
+//     javascript: true,
+//     react: true,
+//     php: false,
+//   },
+// ];
 
 // routing
 app.get("/index", home);
@@ -61,8 +66,22 @@ app.listen(PORT, () => {
 });
 
 // Home
-function home(req, res) {
-  res.render("index", { dataProject });
+async function home(req, res) {
+  try {
+    const query = `SELECT id, author, title, image, content, "createdAt"
+    FROM public.blogs;`
+    let obj = await sequelize.query(query, { type: QueryTypes.SELECT})
+
+    const data = obj.map(res => ({
+      ...res,
+      author: "John"
+    }))
+
+    res.render("index", { dataProject: data });
+  } catch (error) {
+    console.log(error)
+  }
+  
 }
 function contactMe(req, res) {
   res.render("contact");
@@ -94,7 +113,7 @@ function addProject(req, res) {
   
   const data = {
     projectName,
-    author: "Ulala",
+    author: "John",
     startDate,
     endDate,
     content,
@@ -120,10 +139,10 @@ function editedProject(req, res) {
 }
 
 function editProject(req, res) {
-  const { projectName, startDate, endDate, content, nodeJs, javascript,  react, php } = req.body;
+  const { title, startDate, endDate, content, nodeJs, javascript,  react, php } = req.body;
   
   const data = {
-    projectName,
+    title,
     author: "Ulala",
     startDate,
     endDate,
